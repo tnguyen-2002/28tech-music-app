@@ -19,6 +19,7 @@ const port: String = process.env.PORT;
 //* Set up views engine as PUG
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'pug');
+app.use(express.static(`${__dirname}/public`)); //Set up public which contain static file
 //* End set up views
 
 routesClient(app);
